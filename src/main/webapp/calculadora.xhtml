@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:f="http://java.sun.com/jsf/core">
+        <h:head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Document</title>
+        </h:head>
+        <h:body>
+            <p:panel id="panel_principal" header="Calculadora">
+                <h:form id="calculadora_form">
+                    <h:panelGrid columns="2">
+                        <p:outputLabel value="Numero Random:"/>
+                        <p:outputLabel id="numero" value="#{calculadoraBean.numeroRandom}" style="display: none;" />
+                        <p:outputLabel value="Lista:"/>
+                        <p:inputText id="valores" type="text" binding="#{input}"/>
+                        <p:outputLabel value="Media:"/>
+                        <p:outputLabel value="#{calculadoraBean.media}"/>
+                        <p:outputLabel value="Desviación Estandar:"/>
+                        <p:outputLabel value="#{calculadoraBean.desviacionEstandar}"/>
+                        <p:outputLabel value="Varianza:"/>
+                        <p:outputLabel value="#{calculadoraBean.varianza}"/>
+                        <p:outputLabel value="Moda:"/>
+                        <p:outputLabel value="#{calculadoraBean.moda}"/>
+                    </h:panelGrid>
+                    <h:dataTable value="#{calculadoraBean.valoresIngresados}" var="valores">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Intentos"/>
+                            </f:facet>
+                            <h:outputText value="#{valores}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:form>
+            </p:panel>
+            <p:commandButton value="Calculo de valores" update="calculadora_form" actionListener="#{calculadoraBean.calculate(input.value)}"/>
+            <p:commandButton value="Reiniciar" update="calculadora_form" actionListener="#{calculadoraBean.restart}"/>
+        </h:body>
+</html>
