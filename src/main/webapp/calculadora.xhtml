@@ -8,8 +8,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <title>Document</title>
         </h:head>
-        <center><h:body>
-            <img src = "HomeroConGafas.jpg" align= "right" height="500" width="500"/>    
+        <center><h:body>    
             <p:panel id="panel_principal" header="Calculadora">
                 <h:form id="calculadora_form">
                     <h:panelGrid columns="2">
@@ -25,7 +24,7 @@
                         <p:outputLabel value="#{calculadoraBean.varianza}"/>
                         <p:outputLabel value="Moda:"/>
                         <p:outputLabel value="#{calculadoraBean.moda}"/>
-                            
+                <img src = "HomeroConGafas.jpg" align= "right" height="500" width="500"/>         
                     </h:panelGrid>
                     <h:dataTable value="#{calculadoraBean.valoresIngresados}" var="valores">
                         <h:column>
