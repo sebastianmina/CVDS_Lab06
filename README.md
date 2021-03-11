@@ -1,3 +1,3 @@
 # CVDS_Lab06
 
-Ola :(
+[![<CircleCI>](https://circleci.com/<GH>/<sebastianmina/<CVDS_Lab06>.svg?style=svg)](<https://app.circleci.com/pipelines/github/sebastianmina>)
