@@ -8,10 +8,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <title>Document</title>
         </h:head>
-        
-        <body background="HomeroConGafas.jpg">
-        </body>
-        <h:body>
+        <center><h:body>
             <p:panel id="panel_principal" header="Calculadora">
                 <h:form id="calculadora_form">
                     <h:panelGrid columns="2">
@@ -27,6 +24,7 @@
                         <p:outputLabel value="#{calculadoraBean.varianza}"/>
                         <p:outputLabel value="Moda:"/>
                         <p:outputLabel value="#{calculadoraBean.moda}"/>
+                            
                     </h:panelGrid>
                     <h:dataTable value="#{calculadoraBean.valoresIngresados}" var="valores">
                         <h:column>
@@ -40,5 +38,5 @@
             </p:panel>
             <p:commandButton value="Calculo de valores" update="calculadora_form" actionListener="#{calculadoraBean.calculate(input.value)}"/>
             <p:commandButton value="Reiniciar" update="calculadora_form" actionListener="#{calculadoraBean.restart}"/>
-        </h:body>
+                </h:body></center>
 </html>
