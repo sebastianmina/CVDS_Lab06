@@ -6,4 +6,4 @@ deployment:
   staging:
     branch: main
     heroku: 
-      appname: labcvds06
+      appname: amayamina
