@@ -8,6 +8,11 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <title>Document</title>
         </h:head>
+        <style>
+        body {
+                background-image: url('HomeroConGafas.jpg');
+        }
+        </style>
         <center><h:body>    
             <p:panel id="panel_principal" header="Calculadora">
                 <h:form id="calculadora_form">
@@ -24,8 +29,6 @@
                         <p:outputLabel value="#{calculadoraBean.varianza}"/>
                         <p:outputLabel value="Moda:"/>
                         <p:outputLabel value="#{calculadoraBean.moda}"/>
-                <div style="background-image: url('HomeroConGafas.jpg');">
-                </div>
                     </h:panelGrid>
                     <h:dataTable value="#{calculadoraBean.valoresIngresados}" var="valores">
                         <h:column>
